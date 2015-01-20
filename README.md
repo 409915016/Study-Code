@@ -1,2 +1,2 @@
-# Learning-code
-Have some of the learning process code
+# code of studying
+Have some code of studying
