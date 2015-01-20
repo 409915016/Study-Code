@@ -1,0 +1,99 @@
+<!DOCTPYE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Example of Attribute Selectors</title>
+	<style type="text/css">
+		a {
+		font-size: 16px;
+		text-decoration: none;
+		padding-right: 20px;
+		display: inline-block;
+		margin-bottom: 5px;
+		background: url(a.png) no-repeat 100% -327px;
+	}
+		/*匹配所有外部链接*/
+
+		a[href^="http://"]{ 
+		background-position: 100% -409px;
+		}
+
+		a[href="home"]{ 
+		background-position: 100% -382px;
+		}
+
+		a[href$="doc"]{ 
+		background-position: 100% 0;
+		}
+
+		a[href$="ppt"]{ 
+		background-position: 100% -50px;
+		}
+
+		a[href$="xls"]{ 
+		background-position: 100% -75px;
+		}
+
+		a[href$=".html"]{ 
+		background-position: 100% -100px;
+		}
+
+		a[href$=".pdf"]{ 
+		background-position: 100% -125px;
+		}
+
+		a[href$=".jpg"],
+		a[href$=".gif"],
+		a[href$=".png"]{ 
+		background-position: 100% -172px;
+		}
+
+		a[href$=".swf"]{ 
+		background-position: 100% -193px;
+		}
+
+		a[href$=".zip"]
+		a[href$=".rar"]{ 
+		background-position: 100% -217px;
+		}
+
+		a[href$=".mp3"]{ 
+		background-position: 100% -245px;
+		}
+
+		a[href$=".exe"]{ 
+		background-position: 100% -273px;
+		}
+
+		a[href$=".txt"]{ 
+		background-position: 100% -298px;
+		}
+
+		a[href$="mailto"]{ 
+		background-position: 100% -350px;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><a href="http://w3cplus.com">w3cplus</a></li>
+		<li><a href="home">home</a></li>
+		<li><a href="a.doc">Word </a></li>
+		<li><a href="b.ppt">Powerpoint</a></li>
+		<li><a href="c.xls">Excle</a></li>
+		<li><a href="d.html">HTML</a></li>
+		<li><a href="e.pdf">PDF</a></li>
+		<li><a href="f.jpg">JPG</a></li>
+		<li><a href="f.gif">GIF</a></li>
+		<li><a href="f.png">PNG</a></li>
+		<li><a href="g.swf">SWF</a></li>
+		<li><a href="h.zip">ZIP</a></li>
+		<li><a href="h.rar">RAR</a></li>
+		<li><a href="j.mp3">MP3</a></li>
+		<li><a href="h.exe">EXE</a></li>
+		<li><a href="a.txt">TXT</a></li>
+		<li><a href="mailto:w3cplus@hotmail.com">w3cplus@hotmail.com</a></li>
+		<li><a href="#">本地链接</a></li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Relationship Selectors</title>
+	<style type="text/css">
+		* {
+			margin: 0; 
+			padding: 0;
+		}
+		body {
+			width: 300px;
+			margin: 0  auto;
+		}
+		div {
+			margin: 5px;
+			padding: 5px;
+			border: 1px solid #ccc;
+		}
+		div div {
+			background: orange;
+		}
+		/*子选择器
+			elements > elements 
+			Selects all div elements where the parent is a body elements */
+		body > div {
+			background: green;
+		}
+
+		/*相邻兄弟选择器
+			elements + elements 
+			Selects all div elements that are placed immediately after .active elements
+			*/
+		.active + div {
+			background: lime;
+		}
+
+		/*通用兄弟选择器
+			elements1 ~ elements2 
+			Selects every div elements that are preceded by a .active elements */
+		.active ~ div {
+			background: red;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="active">1</div>
+	<!-- 相邻兄弟选择器，类名.active-->
+	<div>2</div>
+	<div>3</div>
+	<div>4
+		<div>5</div>
+		<div>6</div>		
+	</div>
+	<div>7
+		<div>8
+			<div>9
+				<div>10</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+

@@ -1,0 +1,86 @@
+<!DOCTYPE>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Pseudo-Classes Selectors</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		ul {
+			margin: 50px auto;
+			width: 400px;
+			list-style:  none outside none; 
+		}
+		li {
+			display: inline-block;
+			margin: 5px;
+			padding: 5px;
+			width: 50px;
+			height: 50px;
+			font: bold 30px/50px arial;
+			background: #000;
+			color: #fff;
+			border-radius: 50px;
+			text-align: center;
+		}
+		/*===================
+		 伪类选择器使用方法
+		===================*/
+
+		/*==========================
+
+		ul > li:first-child {
+			background-color: green;
+		}
+		
+		ul > li:last-child {
+			background-color: blue;
+		}
+		============================*/
+
+		/*==========================
+		:nth-child, :nth-last-child(n,2n,2n+1,n+5,-n+5,4n+1,odd,even)
+		
+		ul > li:nth-child() {
+			background-color: yellow;
+		}
+
+		ul > li:nth-last-child() {
+			background-color: blue;
+		}
+		
+
+		http://www.fortherecord.simonfosterdesign.com/
+		===========================*/
+
+
+	</style>
+</head>
+<body>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<li>10</li>
+		<li>11</li>
+		<li>12</li>
+		<li>13</li>
+		<li>14</li>
+		<li>15</li>
+		<li>16</li>
+		<li>17</li>
+		<li>18</li>
+		<li>19</li>
+		<li>20</li>
+
+	</ul>
+</body>
+</html>

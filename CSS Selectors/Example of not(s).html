@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Example of not(s)</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			width: 690px;
+			margin: 20px auto;
+			letter-spacing: -4px;
+			word-spacing: -4px;
+			font-size: 0;
+		}
+		li{
+			font-size: 16px;
+			letter-spacing: normal;
+			word-spacing: normal;
+			display: inline-block;
+			*display: inline;
+			zoom:1;
+			list-style: none outside none;
+			margin: 5px; 
+		}
+		img{
+			width: 128px;
+			height: 128px;
+		}
+		.gallery li:nth-child(2){
+			-webkit-filter:grayscale(1);
+		}
+		.gallery li:nth-child(3){
+			-webkit-filter:sepia(1);
+		}
+		.gallery li:nth-child(4){
+			-webkit-filter:saturate(0.5);
+		}
+		.gallery li:nth-child(5){
+			-webkit-filter:hue-rotate(90deg);
+		}
+		.gallery li:nth-child(6){
+			-webkit-filter:invert(1);
+		}
+		.gallery li:nth-child(7){
+			-webkit-filter:opacity(0.2);
+		}
+		.gallery li:nth-child(8){
+			-webkit-filter:blur(3px);
+		}
+		.gallery li:nth-child(9){
+			-webkit-filter:drop-shadow(5px 5px 5px #ccc);
+		}
+		.gallery li:nth-child(10){
+			-webkit-filter:saturate(1) hue-rotate(361deg) brightness(.09);
+		}
+
+		/*
+		  在 .gallery 中 动态伪类选择器 :hover 选择时
+		  实现样式 -webkit-filter 和 opacity
+
+		==========================================================
+
+		  但在 li 中 否定伪类选择器 :not() 使得 :hover 选择器失效
+		  使得样式 -webkit-filter 和 opacity 在 li 样式中被过滤
+
+		==========================================================
+
+		  若不支持filter的非Webkit内核浏览器，但支持 :not()
+		  鼠标悬停在.gallery 上 实现样式 opacity: .7
+
+		==========================================================
+
+		  若 filter 和 :not() 都不支持，将看不到任何样式效果
+
+		==========================================================
+
+		li 		 HTML DOM对象
+		.gallery class类
+		E:hover  动态伪类选择器(用户行为伪类选择器) 鼠标悬停在E元素上 support IE9
+		E:not(F) 否定伪类选择器 匹配所有除元素F外的E元素
+
+		*/
+		.gallery:hover li:not(:hover){  
+			-webkit-filter:blur(2px) grayscale(1);
+			opacity: .7;  
+		}
+
+	</style>
+</head>
+<body>
+	<ul class="gallery">
+		<li>
+			<img src="http://www.w3cplus.com/sites/default/files/filter.jpg">
+		</li>
+		<li>
+			<img src="http://www.w3cplus.com/sites/default/files/filter.jpg">
+		</li>
+		<li>
+			<img src="http://www.w3cplus.com/sites/default/files/filter.jpg">
+		</li>
+		<li>
+			<img src="http://www.w3cplus.com/sites/default/files/filter.jpg">
+		</li>
+		<li>
+			<img src="http://www.w3cplus.com/sites/default/files/filter.jpg">
+		</li>
+		<li>
+			<img src="http://www.w3cplus.com/sites/default/files/filter.jpg">
+		</li>
+		<li>
+			<img src="http://www.w3cplus.com/sites/default/files/filter.jpg">
+		</li>
+		<li>
+			<img src="http://www.w3cplus.com/sites/default/files/filter.jpg">
+		</li>
+		<li>
+			<img src="http://www.w3cplus.com/sites/default/files/filter.jpg">
+		</li>
+		<li>
+			<img src="http://www.w3cplus.com/sites/default/files/filter.jpg">
+		</li>
+	</ul>
+</body>
