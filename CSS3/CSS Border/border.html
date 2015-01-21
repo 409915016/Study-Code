@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>border</title>
+        <style type="text/css">
+            p {
+                margin: 0 auto;
+                padding: 0 auto;
+                text-align: center;
+                font: bold 15px consolas;
+                color: red;
+            }
+            
+            .div1 {
+                margin: 20px auto;
+                width: 520px;
+
+                
+            }
+            .div1 > div {
+                background: yellow;
+                font: bold 15px/80px consolas;
+                text-align: center;
+                
+                vertical-align: middle;
+                letter-spacing: normal;
+                word-spacing: normal;
+                margin: 5px auto;
+                height: 100px;
+                width: 100px;
+                display: inline-block;
+            }
+
+            .div1 > div:nth-of-type(1){
+                border: none;
+            }
+            .div1 > div:nth-of-type(2){
+                border: hidden;
+            }
+            .div1 > div:nth-of-type(3){
+                border: 10px dotted red;
+            }
+            .div1 > div:nth-of-type(4){
+                border: 10px dashed red;
+            }
+            .div1 > div:nth-of-type(5){
+                border: 10px solid red;
+            }
+            .div1 > div:nth-of-type(6){
+                border: 10px double red;
+            }
+            .div1 > div:nth-of-type(7){
+                border: 10px groove red;
+            }
+            .div1 > div:nth-of-type(8){
+                border: 10px ridge red;
+            }
+            .div1 > div:nth-of-type(9){
+                border: 10px inset red;
+            }
+            .div1 > div:nth-of-type(10){
+                border: 10px outset red;
+            }
+            .div1 > div:nth-of-type(11){
+                
+            }
+            
+            .div2 {
+                margin: 20px auto;
+                width: 520px;
+            }
+            .div2 > div{
+                background: yellow;
+                font: bold 15px/80px consolas;
+                text-align: center;
+                vertical-align: middle;
+                letter-spacing: normal;
+                word-spacing: normal;
+                margin: 5px auto;
+                height: 100px;
+                width: 100px;
+                display: inline-block;
+
+                border: 20px solid red;
+                -moz-border-top-colors: #111 #fac #ded #ccc #8f5 #e33 #ddf #000 #cff #36f; 
+                -moz-border-right-colors: #111 #fac #ded #ccc #8f5 #e33 #ddf #000 #cff #36f; 
+                -moz-border-bottom-colors: #111 #fac #ded #ccc #8f5 #e33 #ddf #000 #cff #36f; 
+                -moz-border-left-colors: #111 #fac #ded #ccc #8f5 #e33 #ddf #000 #cff #36f; 
+            }
+            .div2 div > p {
+                font: bold 15px/20px consolas;
+                text-align: center;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="div1">
+            <p>border-style</p>
+            <div>none</div>
+            <div>hidden</div>
+            <div>dotted</div>
+            <div>dashed</div>
+            <div>solid</div>
+            <div>double</div>
+            <div>groove</div>
+            <div>ridge</div>
+            <div>inset</div>
+            <div>ouset</div>
+            <div>inherit</div>
+        </div>
+        
+        <div class="div2">
+            <div>
+                <p>Only the Firefox support</p>
+            </div>
+            
+        </div>
+    </body>
+</html>
