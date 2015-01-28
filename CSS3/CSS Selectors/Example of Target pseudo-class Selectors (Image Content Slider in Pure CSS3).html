@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Image Content Slider in Pure CSS3</title>
+        <style type="text/css">
+            /*
+            http://designmodo.com/slider-css3/
+
+            */
+           
+           body { 
+                background: url(img/bg.jpg) center; 
+                margin: 0 auto; 
+                width: 960px; 
+                padding: 50px;
+           }
+            .slider-wrapper { 
+                position: relative; 
+                margin: 0 auto;
+            }
+
+            .slider-wrapper ul,
+            .slider-wrapper li,
+            .slider-wrapper div,
+            .slider-wrapper img,
+            .slider-wrapper a {
+                margin: 0;
+                padding: 0;
+                border: none;
+                outline: none;
+                list-style: none;
+            }
+             
+            .slider-wrapper {
+                width: 508px;
+                overflow: hidden;
+            }
+             
+            ul.s-thumbs li {
+                float: left;
+            }
+             
+            ul.s-slides,
+            ul.s-slides li,
+            ul.s-slides a,
+            ul.s-slides img {
+                width: 500px;
+                height: 350px;
+                position: relative;
+            }
+             
+            ul.s-slides {
+                overflow: hidden;
+                clear: both;
+            }
+             
+            ul.s-slides li {
+                position: absolute;
+                z-index: 50;
+            }
+
+
+
+            ul.s-thumbs li {
+                float: left;
+                margin-bottom: 10px;
+                margin-right: 11px;
+            }
+             
+            ul.s-thumbs li:last-child {
+                margin-left: 1px;
+                margin-right: 0;
+            }
+             
+            ul.s-thumbs a {
+                display: block;
+                position: relative;
+                width: 55px;
+                height: 55px;
+                border: 4px solid transparent;
+             
+                -webkit-transition: all 0.25s ease-in-out;
+                -moz-transition: all 0.25s ease-in-out;
+                -o-transition: all 0.25s ease-in-out;
+                -ms-transition: all 0.25s ease-in-out;
+                transition: all 0.25s ease-in-out;
+             
+                font: bold 12px/25px Arial, sans-serif;
+                color: #515151;
+                text-decoration: none;
+                text-shadow: 1px 1px 0px rgba(255,255,255,.25), inset 1px 1px 0px rgba(0,0,0,.15);
+            }
+             
+            ul.s-thumbs img {
+                -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+                -moz-box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+                box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+            }
+             
+            ul.s-thumbs a:hover,
+            ul.s-slides {
+                border: 4px solid #141517;
+             
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+             
+                -webkit-box-shadow: 0px 1px 0px rgba(255,255,255,.05);
+                -moz-box-shadow: 0px 1px 0px rgba(255,255,255,.05);
+                box-shadow: 0px 1px 0px rgba(255,255,255,.05);
+            }
+
+
+
+            /* Slide Left */
+             
+            @-webkit-keyframes 'slideLeft' {
+                0% { left: -500px; }
+                100% { left: 0; }
+            }
+             
+            ul.s-slides li.slideLeft:target {
+                z-index: 100;
+             
+                -webkit-animation-name: slideLeft;
+                -webkit-animation-duration: 1s;
+                -webkit-animation-iteration-count: 1;
+            }
+
+
+            /* Slide Right */
+             
+            @-webkit-keyframes 'slideRight' {
+                0% { left: 500px; }
+                100% { left: 0; }
+            }
+             
+            ul.s-slides li.slideRight:target {
+                z-index: 100;
+             
+                -webkit-animation-name: slideRight;
+                -webkit-animation-duration: 1s;
+                -webkit-animation-iteration-count: 1;
+            }
+
+
+            /* Slide Top */
+             
+            @-webkit-keyframes 'slideTop' {
+                0% { top: -350px; }
+                100% { top: 0; }
+            }
+             
+            ul.s-slides li.slideTop:target {
+                z-index: 100;
+             
+                -webkit-animation-name: slideTop;
+                -webkit-animation-duration: 1s;
+                -webkit-animation-iteration-count: 1;
+            }
+
+
+            /* Slide Bottom */
+             
+            @-webkit-keyframes 'slideBottom' {
+                0% { top: 350px; }
+                100% { top: 0; }
+            }
+             
+            ul.s-slides li.slideBottom:target {
+                z-index: 100;
+             
+                -webkit-animation-name: slideBottom;
+                -webkit-animation-duration: 1s;
+                -webkit-animation-iteration-count: 1;
+            }
+
+            /* Zoom In */
+             
+            @-webkit-keyframes 'zoomIn' {
+                0% { -webkit-transform: scale(0.1); }
+                100% { -webkit-transform: none; }
+            }
+             
+            ul.s-slides li.zoomIn:target {
+                z-index: 100;
+                top: 4px;
+             
+                -webkit-animation-name: zoomIn;
+                -webkit-animation-duration: 1s;
+                -webkit-animation-iteration-count: 1;
+            }
+
+            /* Zoom Out */
+             
+            @-webkit-keyframes 'zoomOut' {
+                0% { -webkit-transform: scale(2); }
+                100% { -webkit-transform: none; }
+            }
+             
+            ul.s-slides li.zoomOut:target {
+                z-index: 100;
+             
+                -webkit-animation-name: zoomOut;
+                -webkit-animation-duration: 1s;
+                -webkit-animation-iteration-count: 1;
+            }
+
+            /* Rotate */
+             
+            @-webkit-keyframes 'rotate' {
+                0% { -webkit-transform: rotate(-360deg) scale(0.1); }
+                100% { -webkit-transform: none; }
+            }
+             
+            ul.s-slides li.rotate:target {
+                z-index: 100;
+                top: 4px;
+             
+                -webkit-animation-name: rotate;
+                -webkit-animation-duration: 1s;
+                -webkit-animation-iteration-count: 1;
+            }
+
+            /* Not Target */
+             
+            @-webkit-keyframes 'notTarget' {
+                0% { z-index: 75; }
+                100% { z-index: 75; }
+            }
+             
+            ul.s-slides li:not(:target) {
+                -webkit-animation-name: notTarget;
+                -webkit-animation-duration: 1s;
+                -webkit-animation-iteration-count: 1;
+            }
+                
+            /* First Slide */
+             
+            ul.s-slides li.first {
+                z-index: 60;
+            }
+
+            /* Slider Load */
+             
+            @-webkit-keyframes 'load' {
+                0% { opacity: 0; }
+                50% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+             
+            .slider-wrapper {
+                -webkit-animation-name: load;
+                -webkit-animation-duration: 2s;
+                -webkit-transition-timing-function: ease-in-out;
+                -webkit-animation-iteration-count: 1;
+            }
+
+
+        </style>
+    </head>
+    <body>
+    <img src="img/title.png" alt="">
+    
+    <div class="slider-wrapper">
+    <ul class="s-thumbs">
+        <li><a href="#slide-1"><img src="img/thumb1.png" alt="" /></a></li>
+        <li><a href="#slide-2"><img src="img/thumb2.png" alt="" /></a></li>
+        <li><a href="#slide-3"><img src="img/thumb3.png" alt="" /></a></li>
+        <li><a href="#slide-4"><img src="img/thumb4.png" alt="" /></a></li>
+        <li><a href="#slide-5"><img src="img/thumb5.png" alt="" /></a></li>
+        <li><a href="#slide-6"><img src="img/thumb6.png" alt="" /></a></li>
+        <li><a href="#slide-7"><img src="img/thumb7.png" alt="" /></a></li>
+    </ul>
+    <ul class="s-slides">
+        <li id="slide-1" class="slideLeft"><img src="img/slide1.png" alt="" /></li>
+        <li id="slide-2" class="slideRight"><img src="img/slide2.png" alt="" /></li>
+        <li id="slide-3" class="slideTop"><img src="img/slide3.png" alt="" /></li>
+        <li id="slide-4" class="slideBottom"><img src="img/slide4.png" alt="" /></li>
+        <li id="slide-5" class="zoomIn"><img src="img/slide5.png" alt="" /></li>
+        <li id="slide-6" class="zoomOut"><img src="img/slide6.png" alt="" /></li>
+        <li id="slide-7" class="rotate"><img src="img/slide7.png" alt="" /></li>
+    </ul>
+    </div>
+
+    </body>
+</html>
