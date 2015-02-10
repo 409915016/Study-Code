@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>bxo-shadow</title>
+        <style type="text/css">
+            .main {
+                float:left;
+            }
+                
+            }
+            .main::before {
+                
+            }
+            .inline {
+                white-space:nowrap;
+                clear: both;
+            }
+            
+            .box-shadow {
+                width: 200px;
+                height: 100px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                margin: 20px;
+            }
+            .top {
+                box-shadow: 0 -2px 0 red;
+
+            }
+            .right {
+                box-shadow: 2px 0 0 green;
+                
+            }
+            .bottom {
+                box-shadow: 0 2px 0 blue;
+                
+            }
+            .left {
+                box-shadow: -2px 0 0 orange;
+                
+            }
+            .blur-top {
+                box-shadow: 0 -2px 5px red;
+            }
+            .blur-right {
+                box-shadow: 2px 0 5px green;
+            }
+            .blur-bottom {
+                box-shadow: 0 2px 5px blue;
+            }
+            .blur-left {
+                box-shadow: -2px 0 5px orange;
+
+            }
+
+            .blur-top-end {
+                box-shadow: 0 -4px 5px -3px red;
+            }
+            .blur-right-end {
+                box-shadow: 4px 0 5px -3px green;
+            }
+            .blur-bottom-end {
+                box-shadow: 0 4px 5px -3px blue;
+            }
+            .blur-left-end {
+                box-shadow: -4px 0 5px -3px orange;
+            }
+
+            .blur-and-color {
+                box-shadow: 0 0 10px #06c;
+            }
+            .dis-blur-and-color {
+                box-shadow: 0 0 10px 10px #06c;
+            }
+            .none-blur-and-color {
+                box-shadow: 0 0 10px -10px #06c;
+            }
+
+
+            .spread-and-color {
+                box-shadow: 0 0 0 10px #06c;
+                 /*
+                border:10px solid #06c;
+                 */
+            }
+
+            .box {
+                width: 200px;
+                height: 100px;
+                text-align: center;
+                line-height: 100px;
+                float: left;
+                margin: 30px;
+                background-color: orange;
+            }
+            .border {
+                border:20px solid red;
+            }
+            .box-shadow2 {
+                box-shadow: 0 0 0 20px red;
+            }
+
+            .demo {
+                width: 100px;
+                height: 50px;
+                float: left;
+                background-color: #f69;
+            }
+            .demo2 {
+                box-shadow: -2px 0 5px green,
+                            0 -2px 5px blue,
+                            0 2px 5px red,
+                            2px 0 5px yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main ">
+            <div class="box-shadow top"></div>
+            <div class="box-shadow right"></div>
+            <div class="box-shadow bottom"></div>
+            <div class="box-shadow left"></div>
+        </div>
+        <div class="main ">
+            <div class="box-shadow blur-top"></div>
+            <div class="box-shadow blur-right"></div>
+            <div class="box-shadow blur-bottom"></div>
+            <div class="box-shadow blur-left"></div>
+        </div>
+        <div class="main ">
+            <div class="box-shadow blur-top-end"></div>
+            <div class="box-shadow blur-right-end"></div>
+            <div class="box-shadow blur-bottom-end"></div>
+            <div class="box-shadow blur-left-end"></div>
+        </div>
+        
+        
+        <div class="main ">
+            <div class="box-shadow blur-and-color"></div>
+            <div class="box-shadow dis-blur-and-color"></div>
+            <div class="box-shadow none-blur-and-color"></div>
+            
+        </div>
+        <div class="main ">
+            <div class="box-shadow spread-and-color"></div>
+        </div>
+
+        <div class="main inline">
+            <div class="box border">Border</div>
+            <div class="box box-shadow2 ">Box-shadow</div>
+            
+        </div>
+
+        <div class="demo demo2"></div>
+    </body>
+</html>

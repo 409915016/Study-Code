@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Example of border-radius(Round)</title>
+        <style type="text/css">
+            .float-left {
+                float: left;
+            }
+            .circle {
+                width: 100px;
+                height: 100px;
+                background-color: orange;
+                border-radius: 50%;
+            }
+            .semi-circle , .quarter-circle , .oval{
+                background-color: orange;
+                margin: 30px;
+            }
+            
+            .semi-top {
+                width: 100px;
+                height: 50px;
+                border-radius: 50px 50px 0 0;
+            }
+            .semi-right {
+                width: 50px;
+                height: 100px;
+                border-radius: 0 50px 50px 0;
+            }
+            .semi-bottom {
+                width: 100px;
+                height: 50px;
+                border-radius: 0 0 50px 50px;
+            }
+            .semi-left {
+                width: 50px;
+                height: 100px;
+                border-radius: 50px 0 0 50px;
+            }
+            .quarter-top {
+                width: 100px;
+                height: 100px;
+                border-radius: 100px 0 0 0;
+            }
+            .quarter-right {
+                width: 100px;
+                height: 100px;
+                border-radius: 0 100px 0 0;
+            }
+            .quarter-bottom {
+                width: 100px;
+                height: 100px;
+                border-radius: 0 0 100px 0;
+            }
+            .quarter-left {
+                width: 100px;
+                height: 100px;
+                border-radius: 0 0 0 100px;
+            }
+            .oval-hov {
+                width: 100px;
+                height: 50px;
+                border-radius: 100px / 50px
+            }
+            .oval-ver {
+                width: 50px;
+                height: 100px;
+                border-radius: 50px / 100px
+            }
+        </style>
+    </head>
+    <body>
+        <div class="circle float-left "></div>
+        <div class="float-left ">
+            <div class="semi-circle semi-top"></div>
+            <div class="semi-circle semi-right"></div>
+            <div class="semi-circle semi-bottom"></div>
+            <div class="semi-circle semi-left"></div>
+        </div>
+        <div class="float-left ">
+            <div class="quarter-circle quarter-top"></div>
+            <div class="quarter-circle quarter-right"></div>
+            <div class="quarter-circle quarter-bottom"></div>
+            <div class="quarter-circle quarter-left"></div>
+        </div>
+        <div class="float-left ">
+            <div class="oval oval-hov"></div>
+            <div class="oval oval-ver"></div>
+        </div>
+    </body>
+</html>
