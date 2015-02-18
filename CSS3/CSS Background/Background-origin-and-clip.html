@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Background-origin-and-clip</title>
+        <style type="text/css">
+            .float-left {
+                float: left;
+                margin: 0 50px;
+            }
+            .div-inline {
+                width: 100px;
+                height: 80px;
+                border: 20px dashed rgba(25,25,125,0.5);
+                background: orange url(img/1.jpg) no-repeat;
+                background-size: 180px 180px;
+                margin: 10px;
+                padding: 10px;
+
+            }
+            .back-origin {
+                
+            }
+            .back-origin-padding {
+                background-origin: padding-box;
+            }
+            .back-origin-border {
+                background-origin: border-box;
+            }
+            .back-origin-content {
+                background-origin: content-box;
+            }
+
+            .back-position {
+                background-position: 0% 0%;
+            }
+            .back-position2 {
+                background-position: 100% 100%;
+            }
+
+            .back-clip-padding {
+                background-clip: padding-box;
+            }
+            .back-clip-border {
+                background-clip: border-box;
+            }
+            .back-clip-content {
+                background-clip: content-box;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="float-left">
+            <div class="div-inline back-origin-padding back-position"></div>
+            <div class="div-inline back-origin-padding back-position2"></div>
+        
+            <div class="div-inline back-origin-border back-position"></div>
+            <div class="div-inline back-origin-border back-position2"></div>          
+            <div class="div-inline back-origin-content back-position"></div>
+            <div class="div-inline back-origin-content back-position2"></div>
+        </div>
+        <div class="float-left">
+            <div class="div-inline back-clip-padding"></div>
+            <div class="div-inline back-clip-border"></div>      
+            <div class="div-inline back-clip-content"></div>
+        </div>
+    </body>
+</html>

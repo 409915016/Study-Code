@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Background-size</title>
+        <style type="text/css">
+            .border {
+                margin: 10px;
+                width: 240px;
+                height: 170px;
+                border: 1px solid red;
+            }
+            .auto {
+                background: url(img/2.jpg) no-repeat;
+                background-size: auto;
+            }
+            .origin {
+                background: url(img/2.jpg) no-repeat;
+                background-size: 146px 101px;
+            }
+            .px {
+                background: url(img/2.jpg) no-repeat;
+                background-size: 200px 150px;
+            }
+            .px2 {
+                background: url(img/2.jpg) no-repeat;
+                background-size: 200px ;
+            }
+            .percent {
+                background: url(img/2.jpg) no-repeat;
+                background-size: 50% 50% ;
+            }
+            .cover {
+                background: url(img/2.jpg) no-repeat;
+                background-size: cover;
+            }
+            .contain {
+                margin: 10px;
+                width: 325px;
+                height: 200px;
+                border: 1px solid red;
+                background: url(img/2.jpg) no-repeat;
+                background-size: contain;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="border"></div>
+        <div class="border auto"></div>
+        <div class="border px"></div>
+        <div class="border px2"></div>
+        <div class="border percent"></div>
+        <div class="contain"></div>
+    </body>
+</html>
