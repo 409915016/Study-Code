@@ -1,2 +1,2 @@
-# code of studying
-Have some code of studying
+# Study-Code
+Some learning time code, does not guarantee the preciseness and accuracy
