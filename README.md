@@ -1,2 +1,2 @@
 # Study-Code
-Some learning time code, does not guarantee the preciseness and accuracy
+Some learning time code, does not true and accuracy.
