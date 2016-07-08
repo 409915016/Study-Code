@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <title>就手国际 - 全球正品大集会</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta name="mobile-agent" content="format=html5; url=http://www.jiushouguoji.com">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="全球正品大集会" />
+    <meta name="keywords" content="网上超市,网上商城,网络购物,进口食品,美容护理,母婴玩具,厨房清洁用品,家用电器,手机数码,电脑软件办公用品,家居生活,服饰内衣,营养保健,钟表珠宝,饰品箱包,汽车生活,图书音像,礼品卡,药品,医疗器械,隐形眼镜等,就手国际" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!--    <script src="js/jquery.min.js"></script>-->
+    <!--    <script src="js/swiper-3.3.1.jquery.min.js"></script>-->
+    <!--    <script src="js/jquery.lazyload.min.js"></script>-->
+    <script src="http://cdn.bootcss.com/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/fullPage.js/2.8.1/jquery.fullPage.min.js"></script>
+    <script src="http://cdn.bootcss.com/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+
+</head>
+
+<body class="bg-fa mobile-body">
+    <div class="header-fixed">
+        <a href="./index.html" class="back">
+        </a>
+        <p class="header-title">
+            【3盒装】日版龙角散薄荷味/16包
+        </p>
+    </div>
+    <a href="" class="down-btn-fixed">
+        立即下载
+    </a>
+    <div class="mobile-main">
+        <div class="product-img">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./img/mobile/L3.jpg"></img>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/mobile/L1.jpg"></img>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/mobile/L2.jpg"></img>
+                    </div>
+                </div>
+                <div class="swiper-pagination">
+
+                </div>
+            </div>
+        </div>
+        <div class="product-info">
+            <p class="product-name">
+                <span>¥<em>159.00</em></span> 【3盒装】日版龙角散薄荷味/16包
+            </p>
+            <p class="product-promotion">日本薄荷味龙角散，帮助舒缓因咳嗽、痰、发炎而发生的声音障碍气促，镇压因煤烟灰尘及吸烟过度发生的咳嗽，促进痰的排除。</p>
+
+            <p class="product-express">
+                提示：该产品不支持7天无理由退货
+                <br>
+                <br>
+                <span>包邮</span>
+            </p>
+        </div>
+        <div class="product-details">
+            <input id="product-details-input" type="text" name="" />
+            <label for="product-details-label">
+                商品详情
+            </label>
+            <div class=" product-details-artcle ">
+                <!--图片地址写在 data-original内，冷加载-->
+                <!--两种img加载方式，选择其中一个即可-->
+                <img src="./img/mobile/1.jpg"></img>
+                <img src="./img/mobile/2.jpg"></img>
+                <img class="lazy" data-original="./img/mobile/3.jpg"></img>
+                <img class="lazy" data-original="./img/mobile/4.jpg"></img>
+                <img class="lazy" data-original="./img/mobile/5.jpg"></img>
+                <img class="lazy" data-original="./img/mobile/6.jpg"></img>
+                <img class="lazy" data-original="./img/mobile/7.jpg"></img>
+                <img class="lazy" data-original="./img/mobile/8.jpg"></img>
+                <img class="lazy" data-original="./img/mobile/9.jpg"></img>
+                <img class="lazy" data-original="./img/mobile/10.jpg"></img>
+                <img class="lazy" data-original="./img/mobile/11.jpg"></img>
+                <img class="lazy" data-original="./img/mobile/12.jpg"></img>
+                <img class="lazy" data-original="./img/mobile/13.jpg"></img>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var mySwiper = new Swiper('.product-img .swiper-container', {
+        autoplay: 3500,
+        loop: true,
+        pagination: '.swiper-pagination',
+    });
+    $(document).ready(function () {
+        var scrolltims = 0;
+        var can_jump = 1;
+        var artcle_position = $(".product-details-artcle");
+        var offset_artcle_position = artcle_position.offset();
+        $(function () {
+            $("img.lazy").lazyload({
+                threshold: 1000,
+            });
+        });
+        $(window).scroll(function () {
+            //$(document).scrollTop() 获取垂直滚动的距离
+            //$(document).scrollLeft() 这是获取水平滚动条的距离
+            if ($(document).scrollTop() <= 0) {
+                // alert("滚动条已经到达顶部为0");
+            }
+            //下拉加载详情页
+            if ($(document).scrollTop() >= $(document).height() - $(window).height()) {
+                // alert("滚动条已经到达底部为" + $(document).scrollTop());
+                if (can_jump) {
+                    $(".product-details-artcle").show();
+                    var offset_artcle_position = $(".product-details-artcle").offset();
+                    $("html,body").animate({
+                        scrollTop: offset_artcle_position.top - 90
+                    }, 250);
+                    can_jump = 0;
+                }
+
+            }
+        });
+        //点击加载详情页
+        // $(".product-details label").click(function() {
+        //     if (can_jump) {
+        //         $(".product-details-artcle").show();
+        //         var offset_artcle_position = $(".product-details-artcle").offset();
+        //         $("html,body").animate({
+        //             scrollTop: offset_artcle_position.top - 90
+        //         }, 0);
+        //         can_jump = 0;
+        //     }
+        // });
+    });
+</script>
+
+</html>
