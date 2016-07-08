@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>实时订单弹窗</title>
+    <!--    <script type="text/javascript" src="jquery.min.js"></script>-->
+    <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //JSON data like this
+            //{ "imgURL":"1.jpg" , "msg":"123秒前 用户XXXXXX 购买了 商品商品商品商品商品商品商品商品商品商品" }
+            $("input").click(function () {
+                var display = $(".real-msg-frame").css('display');
+                if (display == 'none') {
+                    msgGetData("a.json");
+                } else console.log("real-msg-frame is ran");
+            });
+        });
+
+        /*accept JSON URL*/
+        function msgGetData(url) {
+            $.getJSON(url, function (data) {
+                fill_into(data);
+            });
+        }
+        /*Data fill into the HTML DOM*/
+        function fill_into(data) {
+            $(".real-msg-frame img").attr({
+                src: "" + data['imgURL']
+            });
+            $(".real-msg-frame span").html("" + data['msg']);
+            RealMsgFrameAnimate();
+        }
+        /*show the block animated*/
+        function RealMsgFrameAnimate() {
+            var msg_box = $(".real-msg-frame");
+            msg_box.css("left", "70%");
+            msg_box.show();
+            msg_box.animate({
+                left: '80%'
+            }, 800, function () {
+                msg_box.css({
+                    "z-index": "1004"
+                })
+            });
+            msg_box.delay(3000).fadeOut(300);
+            msg_box.css("z-index", "1004");
+            msg_box.animate({
+                left: '70%'
+            }, 1);
+
+        }
+    </script>
+    <style>
+        /*demo*/
+        
+        input {
+            position: fixed;
+            left: 90%;
+            bottom: 40%;
+            width: 50px;
+            height: 30px;
+        }
+        
+        .wrap {
+            width: 1090px;
+            margin: 0 auto;
+        }
+        
+        .main {
+            width: 1090px;
+            margin: 0 auto;
+            min-height: 2000px;
+            background-color: #ddd;
+            background: #fff;
+            position: relative;
+            box-shadow: 1px 1px 4px #d3d3d3;
+        }
+        
+        body {
+            min-height: 2000px;
+            margin: 0;
+            padding: 0;
+        }
+        /*
+        the block style
+        */
+        
+        .real-msg-frame {
+            padding: 10px;
+            position: fixed;
+            left: 70%;
+            bottom: 70px;
+            background-color: #fafafa;
+            height: 80px;
+            width: 180px;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+            box-shadow: 1px 1px 5px #ddd;
+            z-index: -1;
+            display: none;
+        }
+        
+        .real-msg-frame> img {
+            float: left;
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+        }
+        
+        .real-msg-frame> span {
+            float: left;
+            height: 80px;
+            width: 100px;
+            vertical-align: top;
+            font-size: 13px;
+            line-height: 20px;
+            color: #333;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="main">
+            <input type="button" value="Test">
+        </div>
+    </div>
+
+    <div class="real-msg-frame">
+        <!--img size 80*80-->
+        <img src="" alt="">
+        <span></span>
+    </div>
+</body>
+
+</html>
