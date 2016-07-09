@@ -1,0 +1,183 @@
+//灰色下拉渐变
+.gray.gradient-bg {
+    background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(214, 214, 214), rgb(175, 175, 175));
+    background: -o-linear-gradient(rgb(255, 255, 255), rgb(214, 214, 214), rgb(175, 175, 175));
+    background: -moz-linear-gradient(rgb(255, 255, 255), rgb(214, 214, 214), rgb(175, 175, 175));
+    background: linear-gradient(rgb(255, 255, 255), rgb(214, 214, 214), rgb(175, 175, 175));
+}
+
+.drop-down {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    > ul {
+        width: 100%;
+        float: left;
+        > li {
+            display: inline;
+            list-style-type: none;
+            position: relative;
+            > a {
+                display: block;
+                background-clip: padding-box;
+                text-align: center;
+                font-size: .9rem;
+                color: #111;
+                padding-top: .2rem;
+                padding-left: .2rem;
+                padding-bottom: .2rem;
+                &:first-child {
+                    .gray.gradient-bg;
+                    border-color: rgb(225, 225, 225);
+                    border-width: 1px;
+                    border-style: solid;
+                    border-radius: 1px;
+                    padding-left: 2rem;
+                    letter-spacing: 2px;
+                    font-size: .82rem;
+                    color: #333333;
+                    box-shadow: 0 2px 5px 0 #777;
+                }
+                i.fa-chevron-down {
+                    float: right;
+                    margin: .2rem .5rem .2rem .2rem;
+                    color: rgb(149, 149, 149);
+                    text-shadow: 0 -1px 1px #333;
+                }
+            }
+        }
+    }
+}
+
+
+/*********************
+
+Nav
+
+**********************/
+
+.drop-down > li > ul {
+    width: 80vw;
+}
+
+.drop-down li ul {
+    display: none;
+    /*脱离文档流*/
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 100%;
+    box-shadow: 1px 3px 5px #aaa;
+}
+
+
+/*一级菜单*/
+
+.drop-down li li {
+    border-bottom-color: #c1c1c1;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    background-color: #f4f4f4;
+}
+
+.drop-down li li:hover,
+.drop-down li li:active {
+    background-color: #fff;
+    white-space: nowrap;
+    //text-overflow: ellipsis;
+}
+
+.drop-down li li > a {
+    display: block;
+    line-height: 1.7rem;
+    font-size: .8rem;
+    padding-left: .5rem;
+    padding-right: .7rem;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.drop-down > ul > li > ul > li > a {
+    background: url('@{img-url}right.png') right no-repeat;
+    background-position: 93% 50%;
+}
+
+
+/*二级菜单 
+默认不显示 
+        */
+
+
+/*使下一级菜单能显示*/
+
+.drop-down li a:hover > ul,
+.drop-down li a:active > ul,
+.drop-down li:hover > ul,
+.drop-down li:active > ul {
+    display: block;
+    width: 40vw;
+}
+
+.drop-down li li {
+    //position: relative;
+    float: none;
+}
+
+
+/*level 3 */
+
+// .drop-down ul ul {
+//     //position: relative;
+// }
+.drop-down li li ul {
+    position: absolute;
+    width: 40vw;
+    left: 40vw;
+    top: 0;
+    box-shadow: 1px 3px 5px #aaa;
+}
+
+.drop-down li li ul li {
+    background-color: #ffffff;
+    border-bottom-color: #c1c1c1;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: #c1c1c1;
+    border-left-style: solid;
+    border-left-width: 1px;
+}
+
+.drop-down li li ul a {}
+
+
+/*
+        垂直菜单
+        所有层级块不浮动 成为块元素
+        a 宽度会填满 li 元素 达到相同宽度
+        
+        */
+
+.drop-down.vertical ul,
+.drop-down.vertical li {
+    float: none;
+}
+
+
+/*二级菜单显示后的位置*/
+
+.drop-down.vertical li ul {
+    /*一个父元素的位移量*/
+    left: 100%;
+    /*与父元素顶部对齐*/
+    top: 0;
+}
+
+
+/*********************
+
+Nav End
+
+**********************/

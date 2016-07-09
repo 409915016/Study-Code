@@ -1,0 +1,277 @@
+//外边距的主页框架
+.main {
+    margin-top: 15vw;
+    margin-left: .75rem;
+    margin-right: .75rem;
+    padding-top: 30px;
+    &.no-padding-t {
+        padding: 30px 0;
+    }
+    &.pad-tb5 {
+        padding: 5px 0;
+    }
+    &.mar-t30vw {
+        margin-top: 30vw;
+    }
+    &.mar-t25vw {
+        margin-top: 25vw;
+    }
+    &.pad-t20 {
+        padding: 20px 0 0 0;
+    }
+    &.pad-t30 {
+        padding: 30px 0 0 0;
+    }
+    &.no-mart {
+        margin-top: 0vw;
+    }
+    &.pad-lrd5rem {
+        margin-left: .5rem;
+        margin-right: .5rem;
+    }
+}
+
+.big-logo {
+    background: url('@{img-url}customer_head.png') no-repeat no-repeat;
+    background-position: top;
+    background-size: 100%;
+    height: 206px;
+    @media only screen and (min-width: 360px) {
+        height: 243px;
+    }
+    @media only screen and (min-width: 400px) {
+        height: 267px;
+    }
+}
+
+span.section-complete {
+    float: right;
+    position: relative;
+    top: 7px;
+    font-size: .6rem;
+    letter-spacing: 1px;
+    color: @blue;
+    font-weight: 500;
+    border: 1px @blue solid;
+    padding: .05rem .3rem;
+    &.complete-ing {
+        border: 1px @red solid;
+        color: @red;
+    }
+    &.complete-ed {
+        border: 1px @font-color-gray solid;
+        color: @font-color-gray;
+    }
+}
+
+.msg-classify {
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    padding: 10px;
+    background: url('@{img-url}jiantou.png') right no-repeat no-repeat;
+    background-color: #ffffff;
+    background-size: 8%;
+    background-position: 97% 50%;
+}
+
+//紧急申请事项页
+//文章内容
+//文章标题
+//发布人 电话 内容
+.section {
+    //margin-top: 30px;
+    height: auto;
+    background-color: #fff;
+    position: relative;
+    p {
+        margin: 0px;
+        color: #333333;
+    }
+    &> .fa-pencil-square-o {
+        position: absolute;
+        right: 15px;
+    }
+    .main & {
+        margin-top: 0vw;
+        padding: 15px;
+        border-radius: 4px;
+    }
+    //title
+    p:nth-of-type(1) {
+        font-size: 1.2rem;
+        color: #666666;
+        &.Emergencytitle {
+            color: @red;
+        }
+    }
+    //time
+    p:nth-of-type(2) {
+        font-size: .8rem;
+        color: #a0a0a0;
+        font-weight: 400;
+        & img {
+            vertical-align: -35%;
+            margin-right: 3%;
+            @media only screen and (min-width: 400px) {
+                vertical-align: -20%;
+            }
+        }
+    }
+    //people
+    p:nth-of-type(3) {
+        margin-top: 5px;
+        font-size: .8rem;
+    }
+    //phone
+    p:nth-of-type(4) {
+        font-size: .8rem;
+    }
+    //content
+    p:nth-of-type(5) {
+        margin-top: 10px;
+        line-height: 1.4rem;
+        font-size: .9rem;
+        color: @font-color-gray;
+        letter-spacing: 1px;
+        text-indent: 1rem;
+    }
+    & span.section-complete {
+        float: right;
+        position: relative;
+        top: 7px;
+        font-size: .6rem;
+        letter-spacing: 1px;
+        color: @blue ;
+        font-weight: 500;
+        border: 1px @blue solid;
+        padding: .05rem .3rem;
+        &.complete-ing {
+            border: 1px @red solid;
+            color: @red ;
+        }
+        &.complete-ed {
+            border: 1px @font-color-gray solid;
+            color: @font-color-gray;
+        }
+    }
+}
+
+.group-msg-list {
+    section.msg-list-title-time,
+    section.msg-classify {
+        position: relative;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        padding: 10px;
+        background: url('@{img-url}jiantou.png') right no-repeat no-repeat;
+        background-color: #ffffff;
+        background-size: 8%;
+        background-position: 97% 50%;
+        p {
+            position: relative;
+            margin: 0;
+            &.msg-list-title {
+                font-size: 17px;
+                color: @font-color-gray;
+            }
+            span[class^="msg"] {
+                color: lighten(@font-color-gray, 20%);
+                &.msg-people-num {
+                    background-color: @people-bg-color;
+                    padding: 1px 12px;
+                    color: @white;
+                }
+                &.msg-list-time {
+                    i {
+                        color: #d4d4d4;
+                    }
+                }
+            }
+            span.section-complete {
+                top: -12px;
+                right: 10%;
+                @media only screen and (min-width: 400px) {
+                    top: -14px;
+                }
+                &.complete-ing {
+                    border: 1px @red solid;
+                    color: @red;
+                }
+            }
+        }
+    }
+    section.msg-classify {
+        border-radius: 0;
+        background-color: #f0feff;
+        p {
+            font-size: 1.1rem;
+            color: @blue;
+            letter-spacing: 3px;
+        }
+        &.no-bg {
+            .cyan-gradient-bg;
+            p {
+                text-align: center;
+                letter-spacing: 3px;
+            }
+        }
+        .msg-people-num {
+            float: right;
+            position: absolute;
+            top: 15px;
+            right: 15%;
+            background-color: @people-bg-color;
+            padding: 1px 20px;
+            color: @white;
+            @media only screen and (min-width: 400px) {
+                top: 19px;
+            }
+        }
+    }
+}
+
+.msg-wrapper {
+    .msg-wrapper-header {
+        width: 100%;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        background-color: @white;
+        p {
+            text-align: center;
+            padding: 8px 0;
+            margin: 0;
+            font-size: .9rem;
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+            border-bottom-color: #bfbfbf;
+        }
+    }
+    .msg-wrapper-list {
+        .msg-classify;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: #f3f3f3;
+        border-radius: 0;
+        margin-bottom: 0px;
+        background-color: #ffffff;
+        background-image: none;
+        img {
+            float: left;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+        }
+        p {
+            margin: 8px;
+            text-indent: 5px;
+        }
+        .msg-wrapper-list-time {
+            float: right;
+            color: #d3d3d3;
+        }
+        &:last-child {
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+    }
+}

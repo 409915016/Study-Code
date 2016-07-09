@@ -1,0 +1,132 @@
+//青色渐变
+.cyan-gradient-bg {
+    background: -webkit-linear-gradient(#d5f9f6, #b4f8f3, #94f7f0);
+    background: -o-linear-gradient(#d5f9f6, #b4f8f3, #94f7f0);
+    background: -moz-linear-gradient(#d5f9f6, #b4f8f3, #94f7f0);
+    background: linear-gradient(#d5f9f6, #b4f8f3, #94f7f0);
+}
+
+//黄金色渐变
+.yellow-gradient-bg {
+    background: -webkit-linear-gradient(#fffbda, #fff569, #fff005);
+    background: -o-linear-gradient(#fffbda, #fff569, #fff005);
+    background: -moz-linear-gradient(#fffbda, #fff569, #fff005);
+    background: linear-gradient(#fffbda, #fff569, #fff005);
+}
+//蓝色搜索按钮渐变
+.search-btn-gradient-bg {
+    background: -webkit-linear-gradient(rgb(51, 150, 252), rgb(51, 135, 232), rgb(51, 109, 208));
+    background: -o-linear-gradient(rgb(51, 150, 252), rgb(51, 135, 232), rgb(51, 109, 208));
+    background: -moz-linear-gradient(rgb(51, 150, 252), rgb(51, 135, 232), rgb(51, 109, 208));
+    background: linear-gradient(rgb(51, 150, 252), rgb(51, 135, 232), rgb(51, 109, 208));
+}
+
+//确认提交按钮
+.button-enter {
+    margin-top: 5vh;
+    height: 50px;
+    border-radius: 1px;
+    border: 1px solid #fff;
+    letter-spacing: 5px;
+    font-size: 1.2rem;
+    color: #3399ff;
+    .cyan-gradient-bg;
+    &.red {
+        color: @red;
+        .yellow-gradient-bg;
+        box-shadow: 0 2px 5px 0 #777;
+    }
+}
+
+//事项查看页下的单个确认/完成/返回按钮
+//或者含有按钮图标，用背景图代替
+.col-xs-12 {
+    & .section-submit-icon {
+        position: absolute;
+        bottom: 6px;
+        right: 54%;
+        @media only screen and (min-width: 400px) {
+            right: 58%;
+        }
+        @media only screen and (min-width: 370px) {
+            right: 58%;
+        }
+    }
+    input.section-enter {
+        .button-enter;
+        border: none;
+        letter-spacing: 1px;
+        padding-left: 80px;
+        padding-right: 40px;
+        //position: relative;
+        text-align: center;
+        height: 50px;
+        margin-left: 25%;
+        &.four-font {
+            margin-left: 18%;
+            @media only screen and (min-width: 375px) {
+                margin-left: 23%;
+            }
+            @media only screen and (min-width: 400px) {
+                margin-left: 23%;
+            }
+        }
+        &.no-icon-enter {
+            padding-left: 55px;
+            padding-right: 55px;
+            font-size: 1.1rem;
+        }
+        &.long-enter {
+            margin-left: 15%;
+            @media only screen and (min-width: 400px) {
+                margin-left: 21%;
+                letter-spacing: 3px;
+                padding-left: 45px;
+                padding-right: 45px;
+            }
+        }
+        @media only screen and (min-width: 375px) {
+            margin-left: 27%;
+        }
+        @media only screen and (min-width: 400px) {
+            margin-left: 26%;
+        }
+    }
+    input.section-return,
+    input.section-editer {
+        .button-enter;
+        border: none;
+        margin-left: 5%;
+        padding: 0 20px;
+        @media only screen and (min-width: 400px) {
+            margin-left: 11%;
+        }
+        @media only screen and (min-width: 375px) {
+            margin-left: 13%;
+        }
+        &.pass {
+            margin-left: 7%;
+            @media only screen and (min-width: 400px) {
+                margin-left: 10%;
+            }
+        }
+    }
+    input.section-editer {
+        padding-left: 50px;
+        margin-left: 1%;
+    }
+    
+    
+    &>.fa-pencil-square-o {
+        position: relative;
+        top: 3px;
+        left: 17%;
+        @media only screen and (min-width: 375px) {
+            left: 14%;
+        }
+        @media only screen and (min-width: 400px) {
+            top: 0;
+            left: 13%;
+        }
+    }
+}

@@ -1,0 +1,69 @@
+html {
+  font-size: 20px;
+  height: 100%;
+}
+@media only screen and (min-width: 401px) {
+  html {
+    font-size: 25px !important;
+  }
+}
+@media only screen and (min-width: 428px) {
+  html {
+    font-size: 26.75px !important;
+  }
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 30px !important;
+  }
+}
+@media only screen and (min-width: 569px) {
+  html {
+    font-size: 35px !important;
+  }
+}
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 40px !important;
+  }
+}
+a:hover {
+  text-decoration: none;
+}
+html {
+  background-color: #41C9FE;
+}
+li {
+  list-style-type: none;
+}
+input[type="search"],
+input[type="text"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  -webkit-appearance: none;
+  outline: none;
+}
+textarea {
+  -webkit-appearance: none;
+  outline: none;
+}
+body {
+  background: url("../img/login_bg2.png") bottom no-repeat no-repeat;
+  max-width: 475px;
+  width: 100%;
+  font-family: '微软雅黑', "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", sans-serif;
+  height: 100%;
+}
+.body-bg {
+  background: url("../img/login_bg2.png") bottom no-repeat no-repeat;
+  max-width: 475px;
+  width: 100%;
+}
+.fa-pencil-square-o {
+  color: #3399ff;
+}
+.confirm-btn-color {
+  color: #3399ff;
+}

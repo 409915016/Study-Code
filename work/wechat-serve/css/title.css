@@ -1,0 +1,75 @@
+.blue-gradient-bg {
+  background: -webkit-linear-gradient(#3397fd, #3385e6, #3264c8);
+  background: -o-linear-gradient(#3397fd, #3385e6, #3264c8);
+  background: -moz-linear-gradient(#3397fd, #3385e6, #3264c8);
+  background: linear-gradient(#3397fd, #3385e6, #3264c8);
+}
+.golden-gradient-bg {
+  background: -webkit-linear-gradient(#fed060, #feae35, #ff8707);
+  background: -o-linear-gradient(#fed060, #feae35, #ff8707);
+  background: -moz-linear-gradient(#fed060, #feae35, #ff8707);
+  background: linear-gradient(#fed060, #feae35, #ff8707);
+}
+.no-gradient-bg {
+  background: #f1f1f1 !important;
+}
+.title-bar {
+  background: -webkit-linear-gradient(#3397fd, #3385e6, #3264c8);
+  background: -o-linear-gradient(#3397fd, #3385e6, #3264c8);
+  background: -moz-linear-gradient(#3397fd, #3385e6, #3264c8);
+  background: linear-gradient(#3397fd, #3385e6, #3264c8);
+  position: fixed;
+  z-index: 1;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  color: #fff;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #fff;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: #fff;
+  box-shadow: 0 2px 5px #999;
+}
+.title-bar.Emergencytitle {
+  background: -webkit-linear-gradient(#fed060, #feae35, #ff8707);
+  background: -o-linear-gradient(#fed060, #feae35, #ff8707);
+  background: -moz-linear-gradient(#fed060, #feae35, #ff8707);
+  background: linear-gradient(#fed060, #feae35, #ff8707);
+}
+.title-bar .go-back {
+  font-size: 0.90rem;
+  float: left;
+  color: #fff;
+  margin-top: 0.35rem;
+  margin-bottom: 0.3rem;
+}
+.title-bar .home-page {
+  font-size: 0.90rem;
+  float: right;
+  margin-top: 0.35rem;
+  margin-bottom: 0.3rem;
+}
+.title-bar .home-page i {
+  color: #fff;
+}
+.title-bar p {
+  font-size: 1.1rem;
+  margin: 0.2rem Calc(33%) 0;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.title-bar p.EmergencyRequest {
+  color: #fff003;
+}
+.title-bar p.longtitle {
+  margin: 0.2rem Calc(22%) 0;
+}
+.title-bar.no-border {
+  border: none;
+  line-height: 1.9rem;
+}
+.title-bar.no-border p {
+  margin-top: .4rem;
+}

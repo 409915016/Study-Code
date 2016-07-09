@@ -1,0 +1,77 @@
+//蓝底渐变
+.blue-gradient-bg {
+    background: -webkit-linear-gradient(rgb(51, 151, 253), rgb(51, 133, 230), rgb(50, 100, 200));
+    background: -o-linear-gradient(rgb(51, 151, 253), rgb(51, 133, 230), rgb(50, 100, 200));
+    background: -moz-linear-gradient(rgb(51, 151, 253), rgb(51, 133, 230), rgb(50, 100, 200));
+    background: linear-gradient(rgb(51, 151, 253), rgb(51, 133, 230), rgb(50, 100, 200));
+}
+.golden-gradient-bg {
+    background: -webkit-linear-gradient(rgb(254, 208, 96), rgb(254, 174, 53), rgb(255, 135, 7));
+    background: -o-linear-gradient(rgb(254, 208, 96), rgb(254, 174, 53), rgb(255, 135, 7));
+    background: -moz-linear-gradient(rgb(254, 208, 96), rgb(254, 174, 53), rgb(255, 135, 7));
+    background: linear-gradient(rgb(254, 208, 96), rgb(254, 174, 53), rgb(255, 135, 7));
+}
+.no-gradient-bg {
+    background: #f1f1f1 !important;
+}
+//默认含有上下白边
+//no-border 取消上下白边
+.title-bar {
+    .blue-gradient-bg;
+    color: #fff;
+    position: fixed;
+    z-index: 1;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    color: #fff;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: #fff;
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-top-color: #fff;
+    box-shadow: 0 2px 5px #999;
+    &.Emergencytitle {
+        .golden-gradient-bg;
+    }
+    .go-back {
+        font-size: 0.90rem;
+        float: left;
+        color: #fff;
+        margin-top: 0.35rem;
+        margin-bottom: 0.3rem;
+    }
+    .home-page {
+        font-size: 0.90rem;
+        float: right;
+        margin-top: 0.35rem;
+        margin-bottom: 0.3rem;
+        i {
+            color: #fff;
+        }
+    }
+    p {
+        font-size: 1.1rem;
+        margin: .2rem Calc(33%) 0;
+        letter-spacing: 1px;
+        text-align: center;
+        //白字上下白边
+        &.ServiceRequest {}
+        //含紧急字样 黄字
+        &.EmergencyRequest {
+            color: #fff003;
+        }
+        //5字长标题 减少外边距
+        &.longtitle {
+            margin: .2rem Calc(22%) 0;
+        }
+    }
+    &.no-border {
+        border: none;
+        line-height: 1.9rem;
+        p {
+            margin-top: .4rem;
+        }
+    }
+}
