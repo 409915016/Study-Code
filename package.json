@@ -1,0 +1,15 @@
+{
+  "name": "async-simple",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "async": "parcel js/async_await/index.html"
+  },
+  "dependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0"
+  }
+}
