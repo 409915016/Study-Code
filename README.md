@@ -13,4 +13,5 @@ Some learning time code, does not true and accuracy.
 ### JavaScript
 
 - async_await
+- script_loader
 

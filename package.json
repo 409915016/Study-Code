@@ -7,7 +7,8 @@
     "async": "parcel js/async_await/index.html"
   },
   "dependencies": {
-    "babel-plugin-transform-runtime": "^6.23.0"
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "script_loader": "^1.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0"
