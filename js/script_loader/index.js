@@ -17,3 +17,27 @@ export function loader (url) {
 
   })
 }
+
+export function xhr (url) {
+  return new Promise((resolve, reject) => {
+    let _xhr
+      = new XMLHttpRequest();
+    _xhr.open('get', url, true);
+    _xhr.onreadystatechange = function () {
+      if (_xhr.readyState == 4) {
+        if (_xhr.status >= 200 && _xhr.status < 300 || _xhr.status == 304) {
+          let script = document.createElement('script');
+          script.type = `text/javascript`;
+          script.text = _xhr.responseText;
+          document.body.appendChild(script);
+          resolve('success')
+        }
+        else {
+          reject(_xhr.status)
+        }
+      }
+    };
+    _xhr.send(null)
+  })
+}
+
