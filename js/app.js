@@ -23,7 +23,26 @@ async function xhr_async () {
 }
 
 //let BBB = loader_async()
-let aaa = xhr_async()
+let aaa = xhr_async();
+
+
+let url = '/app.php';
+
+let par = [
+  'step=2',
+  'time=12345646'
+];
+
+let beacons = new Image()
+beacons.src = url + '?' + par.join('&');
+beacons.onload = function () {
+  if (this.width == 1) console.log('beacons loaded!')
+
+};
+beacons.onerror = function () {
+  throw new Error('beacons loading error!');
+
+};
 
 
 
