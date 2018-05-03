@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from up.qq.com/2014/invitation/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 May 2018 15:09:36 GMT -->
+<head>
+<meta charset="gb2312">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="Description" content="邀请函"/>
+<meta name="Keywords" content="邀请函"/>
+<meta name="author" content="Tencent-TGideas">
+<title>邀请函</title>
+<!-- 设计：tuntun | 重构：mckey | 创建：2014/03/24 | 更新：| 团队博客：http://tgideas.qq.com/ -->
+<script>
+	(function(){
+		if(!/iphone|ipod|android|blackberry|opera|mini|smartphone|iemobile/i.test(navigator.userAgent)) {
+			var path = /tga\/2014(.*)/.exec(window.location.href);
+			if(path&&path[1]!==window.undefined) {window.location='http://up.qq.com'}
+		}
+	})();
+</script>
+<style>
+@font-face {font-family: 'invitation';src:url('fonts/invitation.woff') format('woff'),url('fonts/invitation.ttf') format('truetype');font-weight: normal;font-style: normal;}
+[data-icon]:before {font-family: 'invitation';content: attr(data-icon);speak: none;font-weight: normal;font-variant: normal;text-transform: none;line-height: 1;-webkit-font-smoothing: antialiased;}
+html,body,ul{margin: 0;padding: 0;}
+ul,ol{list-style: none;}
+html,body,.wrap{width: 100%;height: 100%;overflow: hidden;}
+body{font-family: Helvetica;}
+.loading{width: 100px;height: 100px;position: absolute;left: 50%;margin-left: -50px;top: 50%;margin-top: -50px;}
+.loading .img{position: absolute;left: 0;top: 0;width: 100px;height: 100px;-webkit-animation: loading 1s infinite ease-in-out;animation: loading 3s infinite ease-in-out;}
+.loading .text{position: absolute;left: 0;top: 0;width: 100px;height: 100px;color: #020202;font-size: 0.75rem;text-align: center;line-height: 136px;}
+.loading .text span{font-size: 1.5rem;}
+@-webkit-keyframes loading {0% {-webkit-transform: scale(0.8);}40% {-webkit-transform: scale(1.1);opacity: 0.5;}100% {-webkit-transform: scale(0.8);}}
+@keyframes loading {0% {transform: scale(0.8);}40% {transform: scale(1.1);opacity: 0.5;}100% {transform: scale(0.8);}}
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="loading" id="loading">
+			<div class="img">
+				<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+					<polygon points="50,0 0,100 100,100" style="fill:none;stroke:#EAEAEB;stroke-width:3"/>
+				</svg>
+			</div>
+			<div class="text"><span>0</span>%</div>
+		</div>
+	</div>
+	<script>
+
+	// 隐藏标题栏
+	window.scrollTo(0, 1);
+
+	// 资源加载器
+	var ResourceLoader = function(){
+		var self = this;
+		var repImg = /\.jpg$|\.jpeg$|\.png$|\.gif$|\.bmp$/i;
+		var repCss = /\.css$/i;
+		var repScript = /\.js$/i;
+		self.loaded = 0;
+		self.total = 0;
+		var head = document.querySelector('head');
+		for(var i = 0; i < arguments.length; i++) {
+			var url = arguments[i];
+			var elem;
+			if(repImg.test(url)) {
+				elem = new Image();
+				needAppend = true;
+				elem.src = url;
+			} else if(repCss.test(url)) {
+				elem = document.createElement('link');
+				elem.setAttribute('href', url);
+				elem.setAttribute('rel', 'stylesheet');
+				head.appendChild(elem);
+			} else if(repScript.test(url)) {
+				elem = document.createElement('script');
+				elem.src = url;
+				head.appendChild(elem);
+			}
+			if(elem) {
+				self.total ++;
+				elem.addEventListener('load', function(){
+					self.loaded++;
+					self.onchange && self.onchange(self.loaded/self.total);
+				});
+				elem.addEventListener('error', function(){
+					self.loaded++;
+					self.onchange && self.onchange(self.loaded/self.total);
+				});
+			}
+		}
+	}
+
+	// 预加载资源
+	var loader = new ResourceLoader(
+		'../../../ossweb-img.qq.com/images/invatation/bg_01.jpg',
+		'../../../ossweb-img.qq.com/images/invatation/icon01.png',
+		'../../../ossweb-img.qq.com/images/invatation/icon02.png',
+		'../../../ossweb-img.qq.com/images/invatation/icon03.png',
+		'../../../ossweb-img.qq.com/images/invatation/bg_link.png',
+		'../../../ossweb-img.qq.com/images/invatation/bg_end.jpg',
+		'zepto.min.js',
+		'parallax.js'
+	);
+
+	// 进度显示
+	var domTips = document.querySelector('#loading .text span');
+	loader.onchange = function(progress){
+		domTips.innerHTML = parseInt(progress * 100);
+		if(progress) window.location.href = 'main.html';
+	}
+
+	// 我真的不是故意把邀请函的英文打错的5555555555555555
+	</script>
+	<script src="../../../pingjs.qq.com/ping_tcss_ied.js"></script>
+	<script>if(typeof(pgvMain) == 'function') pgvMain();</script>
+</body>
+
+<!-- Mirrored from up.qq.com/2014/invitation/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 May 2018 15:09:36 GMT -->
+</html><!--[if !IE]>|xGv00|91cb2d67aef642f7becc9c84a32d29c7<![endif]-->
